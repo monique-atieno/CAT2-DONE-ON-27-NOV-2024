@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            padding-left: 10px;
+            padding-top: 20px; 
+        }
+       .Pass{
+        padding-top: 4px;
+        padding-bottom: 4px;
+       }
+       .email{
+        padding-top: 4px;
+        padding-bottom: 4px;
+       }
+       .visa{
+        padding-top: 4px;
+        padding-bottom: 4px;
+       }
+       .button{
+        padding-left: 230px;
+        padding-top: 3px;
+       }
+h1{
+    padding-left: 270px;
+    font-size: 20px;
+    font-weight: bolder;
+}
+    </style>
+</head>
+<body>
+    <form name="login"method="post"action="login.php">        
+        <h1>Register Account </h1>
+        <form action="/submit_registration"
+        method="POST">
+        <label for="Full Name">Full Name:</label>
+        <span style="padding-left:53px"> <input type="text" name="Full_Name:" placeholder="as" required>
+        <span style="padding-left:45px"><span style="color: red;">User name must be at least 4 characters</span><br>
+       
+         <div class="Pass">
+        <label for="Password">Password:</label>
+        <span style="padding-left:59px"><input type="password" name="password"  placeholder="••"  required></span>
+        <span style="padding-left:51px"></span><span style="color: red;">Password must be atleast  4 characters</span><br>
+         </div>
+
+        <label for="Confirm Password">Confirm Password:</label>
+        <span style="padding-left:2px"></span><input type="password" name="password"  placeholder="•••••" required>
+        <span style="padding-left:51px"></span><span style="color: red;">Passwords do not match</span><br>
+
+        <div class="email">
+        <label for ="email">Email:</label>
+        <span style="padding-left:84px"></span><input type="email" name="email" aria-placeholder="john@gmail" required>
+        <span style="padding-left:51px"></span><span style="color:red">Invalid email format<br></span>
+        <span style="padding-left:130px">Format:john@gmail.com</span><br>
+        </div>
+
+        <label for="Phone Number">Phone Number:</label>
+        <span style="padding-left:25px"> <input type="tel" name="Phone No" placeholder="111111111111111">
+        <span style="padding-left:45px"><span style="color:red">Invalid phone number<br></span>
+        <span style="padding-left:130px">Format:0XXX-XXX-XXX</span><br>
+
+       <label for="Zip Code">Zip Code:</label>
+       <span style="padding-left:62px"></span><input type="tel" name="Zip Code" placeholder="11111111111111111111111">
+       <span style="padding-left:45px"></span><span style="color:red">Invalid Zip Code<br></span>
+       <span style="padding-left:130px">Format:Use 5 or 9 digits Zip Code</span><br>
+        
+       <div class="visa">
+       <label for="card">Card Type:</label>
+       <span style="padding-left:55px"> 
+        <select id="card" name="card" required>
+       </span> 
+             <option value="">visa</option>
+             <option value="male">mastercard</option>
+             <option value="female">giftcard</option>
+             <option value="other">M-pesa</option>
+             <option value="male">ATM</option>
+           </select>
+           <br>
+     </div>
+     <div class="label8">
+       <label for="card">Card Number:</label>
+       <span style="padding-left:34px">   
+            <input type="card" id="card" name="card" placeholder="1111111111111111111" required><span style="padding-left:50px"><span style="color:red">Invalid card number format</span></span><br>
+           </span> 
+           <span style="padding-left:130px">Format: 1111-2222-3333-4444</span>
+           <br>
+           <label for="expiry">Expiration Date:</label>
+            <span style="padding-left:21px"> 
+                   <input type="expiry" id="expiry" name="expiry" placeholder="11111111111111111111111" required><span style="padding-left:50px"><span style="color:red">Invalid date format</span></span><br>
+                </span> 
+                <span style="padding-left:130px">Format: YYYY-MM-DD</span>
+                <br>
+          </div>
+            <div class="button">
+                <button>Register</button>  <span style="padding-left:6px"><button>Clear Form</button></span>  
+            </div>
+       
+</body>
+</html>
