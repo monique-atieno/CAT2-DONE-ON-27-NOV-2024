@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"href="styles.css"/>
+    <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
+    <style>
+    :root{
+        --BTBC-COLOR:5px solid rgb(175,172,172);
+        --TC-COLOR:5px solid rgb(123,3,123);
+        
+    
+    }
+    
+    body{
+        background-color: #f9f7fe;
+    }
+    a{
+        color: rgb(123,3,123);
+    }
+    header{
+        padding: 0 0 10px 0;
+        border-top: var(--BTBC-COLOR);
+        text-align: center;
+        text-decoration: underline;
+    }
+    h3{
+        padding: 40px 0 0 0;
+        border-top: var(--BTBC-COLOR);
+        font-size: 30px;
+        line-height: 30px;
+        text-transform: capitalize;
+    }
+    .weather-app{
+        background-color: rgb(175,172,172);
+        max-width: 600px;
+        margin: 100px auto;
+        padding: 30px;
+        border-radius: 30px;
+    }
+    
+    h2{
+        color: rgb(81,49,10);
+    
+    }
+    
+    .weather-app-temperature-container{
+        display: flex;
+        padding: 40px 0 0 0;
+        border-top: 30px solid rgb(175,172,172);
+    
+        line-height: 30px;
+        text-transform: capitalize;
+    }
+    .weather-app-temperature{
+        font-size: 80px;
+        margin-left: 10px;
+        font-weight: bold;
+    }
+    
+    .weather-data{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    
+    .weather-app-unit{
+        margin-top: 20px;
+        font-size: 28px;
+    }
+    
+    .Humidity{
+        color: rgb(123,3,123);
+        font-weight: bold;
+    }
+    .form-input{
+        text-decoration: solid;
+        border: none;
+        width: 70%;
+        border-color: blueviolet;
+        border-radius: 5px;
+        font-size: 20px;
+        padding: 10px 15px;
+    }
+    .form-button{
+        border: none;
+        background-color:rgb(123,3,123);
+        color: whitesmoke;
+        padding: 10px 15px;
+        font-size: 20px;
+        text-transform: uppercase;
+        margin-left: 5px;
+        border-radius: 9px;
+    
+    }
+    footer{
+        padding: 0 0 10px 0;
+        border-top: var(--BTBC-COLOR);
+        text-align: center;
+        color: rgba(0,0,0,0.5);
+        font-size: 13px;
+    }
+.table{
+    color: rgb(123,3,123);  
+    padding-left: 20px;
+    
+}
+    </style>
+</head>
+<body>
+    <div class="weather-app">
+        <header>
+            <div>
+                <h2>
+                     Welcome to our Weather application
+                </h2>
+            </div>
+        </header>
+        <main>
+            <div>
+                <form action=""class="search-form" id="search-form">
+                    <input type="search"name="city" id="city-name"placeholder="Enter city name"required class="form-input"/>
+                    <button type="submit"class="form-button">search</button>
+                </form>
+            </div>
+            <div class="weather-data">
+                <h3>Paris</h3>
+                <!--
+                <h3>
+                    ☀️18
+                    <strong>°C</strong>
+                </h3>
+            -->
+                <div class=" tyfdz|weather-app-temperature-container">
+                    <div class="weather-app-temperature"id="currenttemperaturevalue"><img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-day.png"
+                        alt="not loading"class="weather-app-icon">12
+                    <span class="weather-app-unit"><sup>°C</sup></span>
+                </div></div>
+            </div>
+            <div>
+                <div class="Weather-Description">
+                <p>
+                    <span id="currenttime">
+                        Tuesday
+                        14.40
+                    </span>
+                    <span id="weatherdescription">
+                        scattered clouds
+                    </span>
+                    <br/>
+                    Humidity:
+                    <span id="Humidity"class="Humidity">
+                        66,
+                    </span>
+                    Wind Speed:
+                    <span id="windspeed">
+                        4.3
+                    </span>
+                </p>
+                </div>
+            </div>
+            </main>
+            <div class="table">
+            <table>
+                <tr>
+                    <th>Mon &emsp;&emsp;&ensp;&ensp;</th>
+                    <th>Tue &emsp;&emsp;&ensp;&ensp;</th>
+                    <th>Wed &emsp;&emsp;&ensp;&ensp;</th>
+                    <th>Thu &emsp;&emsp;&ensp;&ensp;</th>
+                    <th>Fri &emsp;&emsp;&ensp;&ensp;</th>
+                    <th>Sat &emsp;&emsp;&ensp;&ensp;</th>
+                    <th>Sun &emsp;&emsp;&ensp;&ensp;</th>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="C:\Users\Hp\Downloads\Microsoft-Fluentui-Emoji-3d-Sun-Behind-Rain-Cloud-3d.512.png" alt="sun behind rain cloud" length="40" width="40">
+                    </td>
+                    <td>
+                        <img src="C:\Users\Hp\Downloads\Microsoft-Fluentui-Emoji-3d-Sun-Behind-Rain-Cloud-3d.512.png" alt="sun behind rain cloud" length="40" width="40">
+                    </td>
+                    </td>
+                    <td>
+                        <img src="C:\Users\Hp\Downloads\Microsoft-Fluentui-Emoji-3d-Sun-Behind-Rain-Cloud-3d.512.png" alt="sun behind rain cloud" length="40" width="40">
+                    </td>
+                    <td>
+                        <img src="C:\Users\Hp\Downloads\Microsoft-Fluentui-Emoji-3d-Sun-Behind-Rain-Cloud-3d.512.png" alt="sun behind rain cloud" length="40" width="40">
+                    </td>
+                
+                    <td>
+                        <img src="C:\Users\Hp\Downloads\Microsoft-Fluentui-Emoji-3d-Sun-Behind-Rain-Cloud-3d.512.png" alt="sun behind rain cloud" length="40" width="40">
+                    </td>
+                
+                    <td>
+                        <img src="C:\Users\Hp\Downloads\Microsoft-Fluentui-Emoji-3d-Sun-Behind-Rain-Cloud-3d.512.png" alt="sun behind rain cloud" length="40" width="40">
+                    </td>
+                    
+                    <td>
+                        <img src="C:\Users\Hp\Downloads\Microsoft-Fluentui-Emoji-3d-Sun-Behind-Rain-Cloud-3d.512.png" alt="sun behind rain cloud" length="40" width="40">
+                    </td>
+                </tr>
+                <tr>
+                    <td> 15°  19°</td>
+                    <td> 15°  19°</td>
+                    <td> 15°  19°</td>
+                    <td> 15°  19°</td>
+                    <td> 15°  19°</td>
+                    <td> 15°  19°</td>
+                    <td> 15°  19°</td>
+                </tr>
+            </table>
+            </div>
+        <footer>
+            <div>
+Coded by<a href="https://github.com/Nikah Eryl"target="_blank">Nikah Eryl</a>
+and is on
+<a href="https://github.com/Rennish/Week7-Weather-API"target="_blank">Github</a>
+and hosted by
+<a href="https://rennishweatherapp.netlify.app/"target="_blank">Netlify</a>
+<br>
+The design was done using<a href="https://www.figma.com/"target="_blank">Figma</a>
+            </div>
+        </footer>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
